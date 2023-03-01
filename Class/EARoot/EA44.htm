@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>PlanS</title>
+<link href="../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> PlanS </h1>
+			<!-- <img class="header_image" src="../images/ea-banner.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../images/ea-banner.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="EA9.htm">vba</a> / <a href="EA44.htm">PlanS</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">モデルブラウザ: </div>
+						<ul>
+<a href="EA9.htm">vba</a></ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">PlanS  : Public   クラス</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">作成日:</td>
+			<td width="85%" class="ObjectDetailsValue">2016/05/08 17:33:22</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">更新日:</td>
+			<td class="ObjectDetailsValue">2016/10/30 17:46:00</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../images/plus03.gif" align="absmiddle" id="proj" /></button>プロジェクト:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">作者:</td>
+			<td class="ObjectDetailsValue">anonymous</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">バージョン:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">フェーズ:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">状態:</td>
+			<td class="ObjectDetailsValue">設計中</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">複雑度:</td>
+			<td class="ObjectDetailsValue">簡単</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">難易度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">優先度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" >多重度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../images/plus03.gif" align="absmiddle" id="adv" /></button>追加情報:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">GUID:</td>
+			<td class="ObjectDetailsValue">{A72B653E-1C64-41c5-AF7E-4120DF1404A4}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">ダイアグラム:</td>
+			<td class="ObjectDetailsValue"><a href="EA5.htm">vba</a>, Load, Main, Standby, <a href="EA7.htm">vba.Interfaces</a>, <a href="EA1.htm">ExcelTraversal</a>, Sequence.Dump</td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">2016.08.15&lt;br/&gt;PlanList -#gt; PlanS &#12395;&#22793;&#26356;&lt;br/&gt;&lt;br/&gt;PlanS &#12398; S &#12399;&#12289;Plan&#12463;&#12521;&#12473;&#12434;&#20869;&#37096;&#30340;&#12395;&#35079;&#25968;&#20445;&#25345;&#12377;&#12427;&#12371;&#12392;&#12363;&#12425;&#12289;&lt;br/&gt;&#35079;&#25968;&#24418;&#12398;&#24847;&#21619;&#21512;&#12356;&#12391;&#12289;s &#12434;&#12388;&#12369;&#12390;&#12362;&#12426;&#12289;&#12381;&#12428;&#12434;&#35469;&#35672;&#12375;&#12420;&#12377;&#12367;&#12377;&#12427;&#12383;&#12417;&lt;br/&gt;&#22823;&#25991;&#23383;&#12395;&#12375;&#12390;&#12356;&#12427;&#12290;&lt;br/&gt;</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent != null ? parent.toggleItem('Attributes') : toggleItem('Attributes');" id="AttributesTitle">属性 </li>
+			<li onClick="parent != null ? parent.toggleItem('Operations') : toggleItem('Operations');" id="OperationsTitle">操作 </li>
+			<li onClick="parent != null ? parent.toggleItem('AssociationsFrom') : toggleItem('AssociationsFrom');" id="AssociationsFromTitle">関連  From</li>
+			<li onClick="parent != null ? parent.toggleItem('MessagesTo') : toggleItem('MessagesTo');" id="MessagesToTitle">メッセージ  To</li>
+			<li onClick="parent != null ? parent.toggleItem('MessagesFrom') : toggleItem('MessagesFrom');" id="MessagesFromTitle">メッセージ  From</li>
+			<li onClick="parent != null ? parent.toggleItem('CustomProperties') : toggleItem('CustomProperties');" id="CustomPropertiesTitle">追加属性</li>
+			<li onClick="parent != null ? parent.toggleItem('Links') : toggleItem('Links');" id="LinksTitle">その他の接続 </li>
+		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="50%" class="TableHeading">属性</td>
+			<td width="25%" class="TableHeading">可視性</td>
+			<td width="25%" class="TableHeading">種類</td>
+		</tr>
+						<tr>
+				<td width="50%" class="TableRow">
+					m_planS()
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					<a href="EA33.htm">Plan</a>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			2016.08.07&lt;br/&gt;m_list() -#gt; m_planS() &#12395;&#22793;&#26356;&lt;br/&gt;(&#22823;&#25991;&#23383;&#12398; S &#12399; m_plans &#12392;&#35079;&#25968;&#24418;&#12391;&#12354;&#12427;&#12371;&#12392;&#12434;&#24375;&#35519;&#12377;&#12427;&#12383;&#12417;)&lt;br/&gt;(&#12388;&#12414;&#12426;&#12289;&#37197;&#21015; &#12434;&#24847;&#21619;&#12377;&#12427;)&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow">
+					m_planSIndexMax
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			m_planS&#20869;&#12434;&#12523;&#12540;&#12503;&#12377;&#12427;&#38555;&#12289;&#12381;&#12398;&#37117;&#24230;UBound(m_planS)&#12434;&#23455;&#34892;&#12377;&#12427;&#25163;&#38291;&#12434;&#30465;&#12367;&#12383;&#12417;&#12290;&lt;br/&gt;2016.08.07&lt;br/&gt;m_maxOfListIndex -#gt; m_planSIndexMax &#12395;&#22793;&#26356;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow">
+					m_planSIndex
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						&nbsp;
+						
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow">
+					m_debugDump
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					Boolean
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						&nbsp;
+						
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow">
+					m_dicPlanPerLine
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					Dictionary
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Microsoft Scripting Runtime&lt;br/&gt;&#12434;&#21442;&#29031;&#35373;&#23450;&#12395;&#12377;&#12427;&#12371;&#12392;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow">
+					m_schedule
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					<a href="EA29.htm">IScheduleCalendar</a>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			&#19968;&#30058;&#26368;&#24460;&#12395;&#35373;&#23450;&#12373;&#12428;&#12383;&#12418;&#12398;&#12364;&#20445;&#25345;&#12373;&#12428;&#12427;&#12290;&lt;br/&gt;(&#35373;&#23450;&#12373;&#12428;&#12383;&#12425;&#24120;&#12395;&#19978;&#26360;&#12365;&#12373;&#12428;&#12427;)&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow">
+					m_thisDays
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			&#12381;&#12398;&#26376;&#12398;&#26085;&#25968;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow">
+					m_thisMonth
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			&#12381;&#12398;&#26376;&#12398;&#25968;&#20516;(3&#26376;&#12394;&#12425; 3 )&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow">
+					m_thisYear
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						&nbsp;
+						
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow">
+					m_IExcel
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					<a href="EA45.htm">ExcelTraversal</a>
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						&nbsp;
+						
+				</td>
+			</tr>
+	</table>
+</div><div class="ItemBody" id="OperationsTable">
+	<table class="Table ea_table">
+		<tr>
+			<td width="100%" class="TableHeading">操作</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>Private</i><br />
+					<strong>Class_Initialize</strong> () : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations255" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Constructor&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Private</i><br />
+					<strong>Class_Terminate</strong> () : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations256" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Destructor&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>Add</strong> (sche: <a href="EA29.htm">IScheduleCalendar</a>, 
+oas: IOneAreaSchedule, 
+lNum: Integer, 
+) : Boolean
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations257" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>Standby</strong> (maxSizeOfList: Integer, 
+IExcel: <a href="EA45.htm">ExcelTraversal</a>, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations258" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>GetPerLine</strong> (lNum: Integer, 
+line(): plan, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations259" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>HowManyPlans</strong> () : Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations260" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			&#35336;&#30011;&#12398;&#32207;&#25968;&#12434;&#36820;&#12377;&lt;br/&gt;(&#12371;&#12371;&#12391;&#12398;&#35336;&#30011;&#12392;&#12399;&#12289;&#21508;line&#12363;&#12388;&#27231;&#31278;&#12372;&#12392;&#12398;&#32207;&#25968;)&lt;br/&gt;(1line&#12391;&#27231;&#31278;A&#12289;2line&#12391;&#27231;&#31278;A&#12289;&#12398;&#35336;&#30011;&#12364;&#12354;&#12387;&#12383;&#12425;&#12289;&#35336;&#30011;&#25968;&#12399; 2 &#12391;&#12459;&#12454;&#12531;&#12488;)&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>GetY</strong> () : Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations261" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>GetD</strong> () : Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations262" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>GetM</strong> () : Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations263" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+</div>		<div class="ItemBody" id="AssociationsFromTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="40%" class="TableHeading">要素</td>
+					<td width="30%" class="TableHeading">ソースの役割</td>
+					<td width="30%" class="TableHeading">ターゲットの役割</td>
+				</tr>
+				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA45.htm">ExcelTraversal</a><br />
+						クラス &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>名前:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>名前:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink264" /></button>詳細:
+							<div id="detailsDIVLink264" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="40%" class="TableRow" valign="top">
+						<a href="EA33.htm">«implements» Plan</a><br />
+						クラス &nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>名前:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="30%" class="TableRow" valign="top">
+						<strong>名前:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+				</tr>
+				<tr>
+					<td class="TableRowBottomDashed"  colspan="3">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageLink265" /></button>詳細:
+							<div id="detailsDIVLink265" class="DetailsDiv" >
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>		<div class="ItemBody" id="MessagesToTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="50%" class="TableHeading">要素</td>
+					<td width="50%" class="TableHeading">メッセージ</td>
+				</tr>
+				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA32.htm">«implements» OneAreaSchedule</a></td>
+					<td width="50%" class="TableRow" valign="top">GetColumnDateE()</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage266" /></button>詳細:
+							<div id="detailsDIVMessage266" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA32.htm">«implements» OneAreaSchedule</a></td>
+					<td width="50%" class="TableRow" valign="top">GetColumnDateS()</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage267" /></button>詳細:
+							<div id="detailsDIVMessage267" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA32.htm">«implements» OneAreaSchedule</a></td>
+					<td width="50%" class="TableRow" valign="top">GetCellLowerRight()</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage268" /></button>詳細:
+							<div id="detailsDIVMessage268" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA32.htm">«implements» OneAreaSchedule</a></td>
+					<td width="50%" class="TableRow" valign="top">GetColumnDateE()</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage269" /></button>詳細:
+							<div id="detailsDIVMessage269" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA32.htm">«implements» OneAreaSchedule</a></td>
+					<td width="50%" class="TableRow" valign="top">GetCellUpperLeft()</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage270" /></button>詳細:
+							<div id="detailsDIVMessage270" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA40.htm">«module» ModelNameAlias</a></td>
+					<td width="50%" class="TableRow" valign="top">GetAlias(String,  String)</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage271" /></button>詳細:
+							<div id="detailsDIVMessage271" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA32.htm">«implements» OneAreaSchedule</a></td>
+					<td width="50%" class="TableRow" valign="top">GetColumnMn()</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage272" /></button>詳細:
+							<div id="detailsDIVMessage272" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA32.htm">«implements» OneAreaSchedule</a></td>
+					<td width="50%" class="TableRow" valign="top">GetColumnDateS()</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage273" /></button>詳細:
+							<div id="detailsDIVMessage273" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA33.htm">«implements» Plan</a></td>
+					<td width="50%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage274" /></button>詳細:
+							<div id="detailsDIVMessage274" class="DetailsDiv" >
+							<strong>種類:</strong> New Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA32.htm">«implements» OneAreaSchedule</a></td>
+					<td width="50%" class="TableRow" valign="top">GetColumnHue()</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage275" /></button>詳細:
+							<div id="detailsDIVMessage275" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA33.htm">«implements» Plan</a></td>
+					<td width="50%" class="TableRow" valign="top">SetlNo(Integer)</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage276" /></button>詳細:
+							<div id="detailsDIVMessage276" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA33.htm">«implements» Plan</a></td>
+					<td width="50%" class="TableRow" valign="top">SetPlanOld(Integer,  Integer*,  Integer,  Integer,  Integer)</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage277" /></button>詳細:
+							<div id="detailsDIVMessage277" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA32.htm">«implements» OneAreaSchedule</a></td>
+					<td width="50%" class="TableRow" valign="top">GetRowDate()</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage278" /></button>詳細:
+							<div id="detailsDIVMessage278" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA33.htm">«implements» Plan</a></td>
+					<td width="50%" class="TableRow" valign="top">SetModelName(String,  String,  String)</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage279" /></button>詳細:
+							<div id="detailsDIVMessage279" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>		<div class="ItemBody" id="MessagesFromTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="50%" class="TableHeading">要素</td>
+					<td width="50%" class="TableHeading">メッセージ</td>
+				</tr>
+				<tr>
+					<td width="50%" class="TableRow" valign="top"><a href="EA43.htm">Tools</a></td>
+					<td width="50%" class="TableRow" valign="top">SetYMD(Integer,  Integer,  Integer)</td>
+				</tr>
+		   		<tr>
+					<td class="TableRowBottomDashed"  colspan="2">
+						<div class="DetailsDivParent"><button onclick="switchProjectProperties()"><img src="../images/minus03.gif" align="absmiddle" id="DetailsImageMessage280" /></button>詳細:
+							<div id="detailsDIVMessage280" class="DetailsDiv" >
+							<strong>種類:</strong> Sequence Synchronous Call<br />
+							&nbsp;
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>		<div class="ItemBody" id="CustomPropertiesTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="30%" class="TableHeading">プロパティ</td>
+					<td width="70%" class="TableHeading">値</td>
+				</tr>
+			<tr>
+				<td width="30%" class="TableRow">isFinalSpecialization:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+
+			</table>
+		</div>		<div class="ItemBody" id="LinksTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="30%" class="TableHeading">要素</td>
+					<td width="10%" class="TableHeading">種類</td>
+					<td width="10%" class="TableHeading">接続</td>
+					<td width="10%" class="TableHeading">方向</td>
+					<td width="40%" class="TableHeading">ノート</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA43.htm">Tools</a></td>
+					<td width="10%" class="TableRow" valign="top">クラス</td>
+					<td width="10%" class="TableRow" valign="top">依存</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA37.htm">«module» Dump</a></td>
+					<td width="10%" class="TableRow" valign="top">クラス</td>
+					<td width="10%" class="TableRow" valign="top">依存</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA40.htm">«module» ModelNameAlias</a></td>
+					<td width="10%" class="TableRow" valign="top">クラス</td>
+					<td width="10%" class="TableRow" valign="top">依存</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA29.htm">«interface» IScheduleCalendar</a></td>
+					<td width="10%" class="TableRow" valign="top">クラス</td>
+					<td width="10%" class="TableRow" valign="top">依存</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA36.htm">«module» Main</a></td>
+					<td width="10%" class="TableRow" valign="top">クラス</td>
+					<td width="10%" class="TableRow" valign="top">依存</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA27.htm">«interface» IOneAreaSchedule</a></td>
+					<td width="10%" class="TableRow" valign="top">クラス</td>
+					<td width="10%" class="TableRow" valign="top">依存</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA33.htm">«implements» Plan</a></td>
+					<td width="10%" class="TableRow" valign="top">クラス</td>
+					<td width="10%" class="TableRow" valign="top">Weak</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>	</div>
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dump</title>
+<link href="../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Dump </h1>
+			<!-- <img class="header_image" src="../images/ea-banner.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../images/ea-banner.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="EA9.htm">vba</a> / <a href="EA37.htm">Dump</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">モデルブラウザ: </div>
+						<ul>
+<a href="EA9.htm">vba</a></ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Dump  : Public  &lt;&lt;module&gt;&gt; クラス</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">作成日:</td>
+			<td width="85%" class="ObjectDetailsValue">2016/08/12 18:23:02</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">更新日:</td>
+			<td class="ObjectDetailsValue">2016/10/30 17:36:27</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../images/plus03.gif" align="absmiddle" id="proj" /></button>プロジェクト:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">作者:</td>
+			<td class="ObjectDetailsValue">anonymous</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">バージョン:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">フェーズ:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">状態:</td>
+			<td class="ObjectDetailsValue">設計中</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">複雑度:</td>
+			<td class="ObjectDetailsValue">簡単</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">難易度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">優先度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" >多重度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../images/plus03.gif" align="absmiddle" id="adv" /></button>追加情報:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">GUID:</td>
+			<td class="ObjectDetailsValue">{E124F76C-1311-4298-9493-29C7447B5B3C}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">ダイアグラム:</td>
+			<td class="ObjectDetailsValue"><a href="EA5.htm">vba</a>, Sequence.Dump</td>
+		</tr>
+	</table>
+	
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent != null ? parent.toggleItem('Operations') : toggleItem('Operations');" id="OperationsTitle">操作 </li>
+			<li onClick="parent != null ? parent.toggleItem('CustomProperties') : toggleItem('CustomProperties');" id="CustomPropertiesTitle">追加属性</li>
+			<li onClick="parent != null ? parent.toggleItem('Links') : toggleItem('Links');" id="LinksTitle">その他の接続 </li>
+		</ul>
+<div class="ItemBody" id="OperationsTable">
+	<table class="Table ea_table">
+		<tr>
+			<td width="100%" class="TableHeading">操作</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>Private</i><br />
+					<strong>DumpPlanArroundBourders</strong> (ws: Worksheet, 
+osR: Integer, 
+osCS: Integer, 
+osCE: Integer, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations175" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			2016.09.18&lt;br/&gt;&#19968;&#24230;&#12395;&#35013;&#39166;&#12377;&#12427;&#12424;&#12358;&#20462;&#27491;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Private</i><br />
+					<strong>DumpModelNameAsCaption</strong> (ws: Worksheet, 
+modelName: String, 
+osR: Integer, 
+osC: Integer, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations176" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			2016.09.18&lt;br/&gt;&#19968;&#24230;&#12395;&#35013;&#39166;&#12377;&#12427;&#12424;&#12358;&#20462;&#27491;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Private</i><br />
+					<strong>AddSheet</strong> (name: String, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations177" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Private</i><br />
+					<strong>DumpPlanToSheet44</strong> (ws: Worksheet, 
+pp(): Integer, 
+osR: Integer, 
+osC: Integer, 
+modelName: String, 
+) : Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations178" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Return: &#26368;&#24460;&#12395;&#35352;&#36848;&#12375;&#12383;&#12475;&#12523;&#12398;&#21015;&#30058;&#21495;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Private</i><br />
+					<strong>DumpPlanToSheet2</strong> (ws: Worksheet, 
+pPlans(): Plan, 
+osR: Integer, 
+osC: Integer, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations179" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Return: &#26368;&#24460;&#12395;&#35352;&#36848;&#12375;&#12383;&#12475;&#12523;&#12398;&#21015;&#30058;&#21495;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Private</i><br />
+					<strong>DumpPlanToSheet3</strong> (ws: Worksheet, 
+p: Variant, 
+osR: Integer, 
+osC: Integer, 
+) : Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations180" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Return: &#26368;&#24460;&#12395;&#35352;&#36848;&#12375;&#12383;&#12475;&#12523;&#12398;&#21015;&#30058;&#21495;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>StandbyDumpSheet</strong> (name: String, 
+) : Worksheet
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations181" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>DumpDate</strong> (ws: Worksheet, 
+pList: PlanS, 
+osR: Integer, 
+osC: Integer, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations182" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			Return: &#26368;&#24460;&#12395;&#35352;&#36848;&#12375;&#12383;&#12475;&#12523;&#12398;&#21015;&#30058;&#21495;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>DumpPlanToSheet4</strong> (ws: Worksheet, 
+gPlan: <a href="EA26.htm">IGroupingPlan</a>, 
+osR: Integer, 
+osC: Integer, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations183" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			2016.08.15&lt;br/&gt;DumpPlanToSheet33&#12398;column&#12434;1&#12388;&#21491;&#12395;&#12378;&#12425;&#12377;&#12290;&lt;br/&gt;modelName, Alias, volume, &#12392;&#20986;&#21147;&#12377;&#12427;&#12364;&#12289;&lt;br/&gt;&#36890;&#24120;&#12289;&#26368;&#21021;&#12398;volume&#12399;1&#26085;&#12398;&#12418;&#12398;&#12290;&lt;br/&gt;&#12371;&#12428;&#12399;&#12289;&#12525;&#12483;&#12488;&#12398;&#26368;&#21021;&#12391;&#12354;&#12426;&#12289;&#12381;&#12398;&#22580;&#21512;&#12399;&#12289;1&#12388;&#25163;&#21069;&#12395;&#22411;&#24335;&#21517;&#12434;&#20986;&#21147;&#12377;&#12427;&#12424;&#12358;&#12395;&#12394;&#12387;&#12390;&#12356;&#12427;&#12290;&lt;br/&gt;&#12381;&#12398;1&#12388;&#25163;&#21069;&#12395;&#12399;&#12289;Alias&#12364;&#20986;&#21147;&#12373;&#12428;&#12356;&#12427;&#12398;&#12391;&#12289;&#12475;&#12523;&#12398;&#32080;&#21512;&#26178;&#12289;&#35686;&#21578;&#12480;&#12452;&#12450;&#12525;&#12464;&#12364;&#34920;&#31034;&#12373;&#12428;&#12390;&#12375;&#12414;&#12358;&#12290;&lt;br/&gt;&#12381;&#12398;&#23550;&#24540;&#12290;&lt;br/&gt;modelName, Alias&#12398;&#20986;&#21147;&#12364;&#12398;&#21487;&#21542;&#12399;&#20170;&#24460;&#27770;&#12417;&#12427;&#12290;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>DumpProductLineAsCaption</strong> (ws: Worksheet, 
+productLine: Integer, 
+osRS: Integer, 
+osRE: Integer, 
+osC: Integer, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations184" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+</div>		<div class="ItemBody" id="CustomPropertiesTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="30%" class="TableHeading">プロパティ</td>
+					<td width="70%" class="TableHeading">値</td>
+				</tr>
+			<tr>
+				<td width="30%" class="TableRow">isFinalSpecialization:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+
+			</table>
+		</div>		<div class="ItemBody" id="LinksTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="30%" class="TableHeading">要素</td>
+					<td width="10%" class="TableHeading">種類</td>
+					<td width="10%" class="TableHeading">接続</td>
+					<td width="10%" class="TableHeading">方向</td>
+					<td width="40%" class="TableHeading">ノート</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA44.htm">PlanS</a></td>
+					<td width="10%" class="TableRow" valign="top">クラス</td>
+					<td width="10%" class="TableRow" valign="top">依存</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA26.htm">«interface» IGroupingPlan</a></td>
+					<td width="10%" class="TableRow" valign="top">クラス</td>
+					<td width="10%" class="TableRow" valign="top">依存</td>
+					<td width="10%" class="TableRow" valign="top">To</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA36.htm">«module» Main</a></td>
+					<td width="10%" class="TableRow" valign="top">クラス</td>
+					<td width="10%" class="TableRow" valign="top">依存</td>
+					<td width="10%" class="TableRow" valign="top">From</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>	</div>
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

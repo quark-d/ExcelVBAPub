@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Enum</title>
+<link href="../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Enum </h1>
+			<!-- <img class="header_image" src="../images/ea-banner.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../images/ea-banner.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="EA9.htm">vba</a> / <a href="./EA2/EA59.htm">Enum</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">モデルブラウザ: </div>
+						<ul>
+<li><img src="../images/175.png" alt="Diagram"/> <a href="./EA2/EA57.htm">Enum</a></li>
+<li><img src="../images/247.png" alt="Enumeration"/> <a href="./EA2/EA60.htm">ESearchDirection</a></li>
+</ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Enum  : Public   パッケージ</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">作成日:</td>
+			<td width="85%" class="ObjectDetailsValue">2016/08/17 13:57:18</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">更新日:</td>
+			<td class="ObjectDetailsValue">2016/08/17 18:04:32</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../images/plus03.gif" align="absmiddle" id="proj" /></button>プロジェクト:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">作者:</td>
+			<td class="ObjectDetailsValue">hadron</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">バージョン:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">フェーズ:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">状態:</td>
+			<td class="ObjectDetailsValue">設計中</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">複雑度:</td>
+			<td class="ObjectDetailsValue">簡単</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">難易度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">優先度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" >多重度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../images/plus03.gif" align="absmiddle" id="adv" /></button>追加情報:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">GUID:</td>
+			<td class="ObjectDetailsValue">{6BABAC5A-793E-4a6a-83EA-991500835A3F}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">ダイアグラム:</td>
+			<td class="ObjectDetailsValue"><a href="./EA2/EA57.htm">Enum</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">VBE&#12398;IDE&#12395;&#12362;&#12356;&#12390;&#12289;&lt;br/&gt;&#12514;&#12472;&#12517;&#12540;&#12523;&#12434;&#36984;&#25246;&#12375;&#12289;&#12503;&#12525;&#12497;&#12486;&#12451;&#12391;&#30906;&#35469;&#12391;&#12365;&#12427; &#12458;&#12502;&#12472;&#12455;&#12463;&#12488;&#21517; &#12364;&#12289;&lt;br/&gt;&#12463;&#12521;&#12473;&#21517;&#12392;&#19968;&#33268;&#12375;&#12390;&#12399;&#12356;&#12369;&#12394;&#12356;&#12371;&#12392;&#12364;&#20998;&#12363;&#12387;&#12383;&#12290;&lt;br/&gt;&lt;br/&gt;&#32080;&#26524;&#12289;&lt;br/&gt;&#12539;&#12463;&#12521;&#12473;&#21517;&#12392;&#12289;&#12501;&#12449;&#12452;&#12523;&#21517;&#12399;&#19968;&#33268;&#12375;&#12390;&#12418;&#27083;&#12431;&#12394;&#12356;&#12290;&lt;br/&gt;&#12539;&#12463;&#12521;&#12473;&#21517;&#12392;&#12289;&#12458;&#12502;&#12472;&#12455;&#12463;&#12488;&#21517;&#12399;&#19968;&#33268;&#12375;&#12390;&#12399;&#12356;&#12369;&#12394;&#12356;&#12290;&lt;br/&gt;&lt;br/&gt;&#20986;&#21147;&#12377;&#12427;&#38555;&#12395;&#12289;&lt;br/&gt;elemType == Enumeration &#12394;&#12425;&lt;br/&gt;Attribute VB_Name = &quot;E%className%&quot;&lt;br/&gt;&#12392;&#12289;E &#12434;&#25509;&#38957;&#36766;&#12392;&#12377;&#12427;&#12424;&#12358;&#12395;&#12375;&#12383;&lt;br/&gt;&lt;br/&gt;&#12364;&#12289;&#20170;&#24230;&#12399;Excel&#20596;&#12398;&#33258;&#21205;&#35299;&#25918;(Remove)/Import&#12391;&#21839;&#38988;&#12364;&#30330;&#29983;&#12290;&lt;br/&gt;&#35299;&#25918;&#12377;&#12427;&#12392;&#12365;&#12399;&#12289;&#12458;&#12502;&#12472;&#12455;&#12463;&#12488;&#21517;&lt;br/&gt;Import&#12377;&#12427;&#12392;&#12365;&#12399;&#12289;&#12501;&#12449;&#12452;&#12523;&#21517;&lt;br/&gt;&#12398;&#25351;&#23450;&#12364;&#24517;&#35201;&#12290;&lt;br/&gt;Import&#12398;&#20181;&#26041;&#12434;&#22793;&#26356;&#12375;&#12383;&#12290;&#22238;&#36991;&#12375;&#12383;&#12290;&lt;br/&gt;&lt;br/&gt;Enum&#12398;&#22580;&#21512;&#12399;&#12289;&#25313;&#24373;&#23376;&#12434;bas&#12395;&#12377;&#12427;&#12371;&#12392;&#12290;&lt;br/&gt;(cls&#12391;&#12418;&#21487;&#33021;&#12363;&#12393;&#12358;&#12363;&#12399;&#26410;&#30906;&#35469;)&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;</div>
+
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+

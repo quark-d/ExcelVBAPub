@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Iterator</title>
+<link href="../css/ea.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" src="../js/displayToc.js" type="text/javascript"></script>
+<script>
+
+  function switchProjectProperties() {
+			if (document.getElementById("proj00").style.display == "none") {
+				document.getElementById("proj00").style.display = "revert";
+				document.getElementById("proj01").style.display = "revert";
+				document.getElementById("proj02").style.display = "revert";
+				document.getElementById("proj03").style.display = "revert";
+				document.getElementById("proj04").style.display = "revert";
+				document.getElementById("proj05").style.display = "revert";
+			} else {
+				document.getElementById("proj00").style.display = "none";
+				document.getElementById("proj01").style.display = "none";
+				document.getElementById("proj02").style.display = "none";
+				document.getElementById("proj03").style.display = "none";
+				document.getElementById("proj04").style.display = "none";
+				document.getElementById("proj05").style.display = "none";
+			}
+}
+
+		function switchAdvancedProperties(){
+
+			if (document.getElementById("adv00").style.display == "none") {;
+				document.getElementById("adv00").style.display = "revert";
+				document.getElementById("adv01").style.display = "revert";
+			} else {
+				document.getElementById("adv00").style.display = "none";
+				document.getElementById("adv01").style.display = "none";
+			}
+		}
+		function initPage()
+        {			
+			var divs = document.getElementsByClassName("ObjectDetailsNotes");
+			for (var j = 0; j < divs.length; j++) {
+				var tmpStr = divs[j].innerHTML;
+				tmpStr = tmpStr.replace(/#gt;/g, "&gt;");
+				tmpStr = tmpStr.replace(/#lt;/g, "&lt;");
+
+				tmpStr = tmpStr.replace(/&gt;/g, ">");
+				tmpStr = tmpStr.replace(/&lt;/g, "<");
+
+				divs[j].innerHTML = tmpStr;
+			}
+
+            if (document.getElementById('TableGroup') != null)
+            {
+                toggleItem(document.getElementById('TableGroup').getElementsByTagName('li')[0].id.replace("Title", ""));
+            }
+
+        }
+</script>
+<style>
+
+</style>
+</head>
+<body onload="initPage();">
+<div class="section group" >
+
+		<div class="col span_2_of_2 header_frame">
+			<h1> Iterator </h1>
+			<!-- <img class="header_image" src="../images/ea-banner.png" align="right" alt="Header Image" />-->
+			<img class="header_image" src="../images/ea-banner.png" align="right" alt="Header Image" />
+		</div>
+		<div class="col span_2_of_2 breadcrumb_frame">
+			<p><a href="EA9.htm">vba</a> / <a href="EA30.htm">Iterator</a></p>
+		</div>
+			
+		<table class="contentmaintable">
+			<!-- <tfoot>
+				<tr>
+					<td>foot1</td>
+					<td>foot2</td>
+				</tr>
+			</tfoot> -->
+			<tbody>
+				<tr>
+					<td class="indexcell">
+						<div class="projectBrowserTitle">モデルブラウザ: </div>
+						<ul>
+<a href="EA9.htm">vba</a></ul>
+
+					</td>
+					<td class="contentcell"><div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Iterator  : Public  &lt;&lt;interface&gt;&gt; クラス</span>
+	<table border="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">作成日:</td>
+			<td width="85%" class="ObjectDetailsValue">2016/08/14 18:32:56</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">更新日:</td>
+			<td class="ObjectDetailsValue">2016/08/14 21:08:57</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchProjectProperties()"><img src="../images/plus03.gif" align="absmiddle" id="proj" /></button>プロジェクト:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">作者:</td>
+			<td class="ObjectDetailsValue">hadron</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">バージョン:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">フェーズ:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">状態:</td>
+			<td class="ObjectDetailsValue">設計中</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">複雑度:</td>
+			<td class="ObjectDetailsValue">簡単</td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">難易度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj06" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">優先度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj05" style="display: none;">
+			<td class="ObjectDetailsTopic" >多重度:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><button onclick="switchAdvancedProperties()"><img src="../images/plus03.gif" align="absmiddle" id="adv" /></button>追加情報:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">GUID:</td>
+			<td class="ObjectDetailsValue">{F4517D1A-947D-4631-918D-CAE14D83A7CF}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">ダイアグラム:</td>
+			<td class="ObjectDetailsValue"><a href="EA5.htm">vba</a>, <a href="EA7.htm">vba.Interfaces</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">&#23455;&#35013;&#20596;&#12391;&#12289;&#20197;&#19979;&#12398;&#23646;&#24615;&#12434;&#23450;&#32681;&#12377;&#12427;&#12371;&#12392;&lt;br/&gt;(VBA&#12398;Interface&#12399;C++&#12398;&#32020;&#31883;&#20206;&#24819;&#38306;&#25968;&#25201;&#12356;)&lt;br/&gt;(&#12392;&#12399;&#12356;&#12360;&#12289;&#23455;&#38555;&#12395;&#23646;&#24615;&#12434;&#23450;&#32681;&#12375;&#12390;&#12418;&#12456;&#12521;&#12540;&#12395;&#12399;&#12394;&#12425;&#12394;&#12356;)&lt;br/&gt;Private m_index As Integer&lt;br/&gt;Private m_indexMax As Integer&lt;br/&gt;&lt;br/&gt;&#23455;&#35013;&#20596;&#12391;&#12289;&#23646;&#24615;&#12434;&#21021;&#26399;&#21270;&#12377;&#12427;&#38306;&#25968;&#12434;&#29992;&#24847;&#12377;&#12427;&#12371;&#12392;&lt;br/&gt;ex.&lt;br/&gt;Public Sub InitByInteger(ByRef arr() As Integer)&lt;br/&gt;&#160;&#160;m_index = 0&lt;br/&gt;&#160;&#160;m_indexMax = UBound(arr)&lt;br/&gt;End Sub&lt;br/&gt;</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent != null ? parent.toggleItem('Attributes') : toggleItem('Attributes');" id="AttributesTitle">属性 </li>
+			<li onClick="parent != null ? parent.toggleItem('Operations') : toggleItem('Operations');" id="OperationsTitle">操作 </li>
+			<li onClick="parent != null ? parent.toggleItem('CustomProperties') : toggleItem('CustomProperties');" id="CustomPropertiesTitle">追加属性</li>
+		</ul>
+<div class="ItemBody" id="AttributesTable">
+	<table border="0" cellspacing="0" cellpadding="0" class="Table">
+		<tr>
+			<td width="50%" class="TableHeading">属性</td>
+			<td width="25%" class="TableHeading">可視性</td>
+			<td width="25%" class="TableHeading">種類</td>
+		</tr>
+						<tr>
+				<td width="50%" class="TableRow">
+					m_index
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						&nbsp;
+						
+				</td>
+			</tr>			<tr>
+				<td width="50%" class="TableRow">
+					m_indexMax
+				</td>
+				<td width="25%" class="TableRow">
+					Private 
+				</td>
+				<td width="25%" class="TableRow">
+					Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="3">										
+					
+						&nbsp;
+						
+				</td>
+			</tr>
+	</table>
+</div><div class="ItemBody" id="OperationsTable">
+	<table class="Table ea_table">
+		<tr>
+			<td width="100%" class="TableHeading">操作</td>
+		</tr>
+						<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>Reset</strong> (all: Boolean, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations40" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>Increment</strong> (step: Integer, 
+) : Boolean
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations41" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			&#12452;&#12531;&#12463;&#12522;&#12513;&#12531;&#12488;&#12391;&#12365;&#12383;&#12425;True&#12434;&#36820;&#12377;&lt;br/&gt;&#12391;&#12365;&#12394;&#12363;&#12387;&#12383;&#12425;&#12289;False&#12434;&#36820;&#12377;&#12290;(&#12377;&#12391;&#12395;&#26368;&#22823;&#20516;&#12395;&#21040;&#36948;&#12375;&#12390;&#12356;&#12427;)&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>Decrement</strong> () : Boolean
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations42" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			&#12487;&#12463;&#12522;&#12513;&#12531;&#12488;&#12391;&#12365;&#12383;&#12425;True&#12434;&#36820;&#12377;&lt;br/&gt;&#12391;&#12365;&#12394;&#12363;&#12387;&#12383;&#12425;&#12289;False&#12434;&#36820;&#12377;&#12290;(&#12377;&#12391;&#12395;0&#12395;&#21040;&#36948;&#12375;&#12390;&#12356;&#12427;)&lt;br/&gt;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>Index</strong> () : Integer
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations43" class="DetailsDiv" >					
+					
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>			<tr>
+				<td width="100%" class="TableRow">
+					<i>Public</i><br />
+					<strong>InitByArray</strong> (arr(): Variant, 
+) : 
+				</td>
+			</tr>
+			<tr>
+				<td class="TableRowBottomDashed"  colspan="1">
+					<div class="DetailsDivParent">詳細:</BR>
+						<div id="detailsDIVOperations44" class="DetailsDiv" >					
+					<div class="ObjectDetailsNotes"><table>
+	<tr>
+		<td valign="top">
+			<i>ノート: </i><span style="margin-left: .4cm;"> </span>
+		</td>
+		<td>
+			&#24341;&#25968;&#12398;&#37197;&#21015;&#12398;UBound&#12364;&#26368;&#22823;&#20516;&#12392;&#12394;&#12427;&lt;br/&gt;
+		</td>
+	</tr>
+</table></div>
+
+						</div>
+<div style="text-align: right">[ Is static False. Is abstract False. Is return array False. Is query False. Is synchronized False. ]</div>
+					</div>
+				</td>
+			</tr>
+		</table>
+</div>		<div class="ItemBody" id="CustomPropertiesTable">
+			<table class="Table ea_table">
+				<tr>
+					<td width="30%" class="TableHeading">プロパティ</td>
+					<td width="70%" class="TableHeading">値</td>
+				</tr>
+			<tr>
+				<td width="30%" class="TableRow">isFinalSpecialization:</td>
+				<td width="70%" class="TableRow">0</td>
+			</tr>
+
+
+			</table>
+		</div>	</div>
+ </div>
+ </td>
+				</tr>
+			</tbody>
+		</table>
+		
+</div>
+</body>
+</html>
+
